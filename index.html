@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080a12">
+  <title>Happy Birthday Khalo 🎂</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<!-- LOADING -->
+<div id="loadingScreen" class="screen">
+  <div class="loader-card glass">
+    <div class="cake-mini">🎂</div>
+    <h1>Preparing something special...</h1>
+    <p>For Khalo ❤️</p>
+
+    <div class="progress">
+      <span id="progressBar"></span>
+    </div>
+
+    <b id="progressText">0%</b>
+  </div>
+</div>
+
+
+<!-- PASSWORD -->
+<div id="gateScreen" class="screen hidden">
+  <div class="gate-card glass">
+
+    <div class="big-icon">🔐</div>
+
+    <span class="eyebrow">PRIVATE MEMORY</span>
+
+    <h1>مين داخل هنا؟ 😂</h1>
+
+    <p>
+      جاوب على السؤال عشان نفتح عالم Khalo
+    </p>
+ <div class="question">
+      اكتر واحد بيعصبني
+    </div>
+
+    </div>
+
+    <input
+      id="gateInput"
+      placeholder="اكتب الإجابة هنا"
+    >
+
+    <button class="primary" id="gateBtn">
+      افتح الموقع ✨
+    </button>
+
+    <small id="gateError"></small>
+
+  </div>
+</div>
+
+
+<!-- WEBSITE -->
+<main id="site" class="hidden">
+
+  <!-- NAVBAR -->
+  <header class="nav glass">
+
+    <div class="brand">
+      KHALO<span>19</span>
+    </div>
+
+    <button
+      id="soundBtn"
+      class="icon-btn"
+      title="الصوت"
+    >
+      🔇
+    </button>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero section">
+
+    <div class="hero-content">
+
+      <span class="eyebrow">
+        A SPECIAL DAY FOR A SPECIAL FRIEND
+      </span>
+
+      <h1>
+        Happy Birthday
+        <br>
+        <strong>Khalo</strong> 🎂
+      </h1>
+
+      <p>
+        مش مجرد عيد ميلاد...
+        دي رحلة صغيرة في ذكريات صحبتنا ❤️
+      </p>
+
+      <div class="hero-actions">
+
+        <button
+          class="primary"
+          onclick="scrollToId('memories')"
+        >
+          ابدأ الرحلة ↓
+        </button>
+
+        <button
+          class="secondary"
+          onclick="celebrate()"
+        >
+          احتفل 🎉
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-cake glass">
+
+      <div class="cake">
+        🎂
+      </div>
+
+      <div class="candles">
+        <i>🕯️</i>
+        <i>🕯️</i>
+        <i>🕯️</i>
+      </div>
+
+      <span>
+        19 YEARS OF CHAOS 😂
+      </span>
+
+    </div>
+
+  </section>
+
+
+  <!-- NUMBERS -->
+  <section class="section">
+
+    <div class="section-title">
+      <span>01</span>
+      <h2>Khalo in numbers</h2>
+    </div>
+
+    <div class="stats">
+
+      <div class="glass stat">
+        <b>∞</b>
+        <span>عدد الرخامة</span>
+      </div>
+
+      <div class="glass stat">
+        <b>999+</b>
+        <span>ضحكة</span>
+      </div>
+
+      <div class="glass stat">
+        <b>ERROR</b>
+        <span>مواعيد الوصول</span>
+      </div>
+
+      <div class="glass stat">
+        <b>100%</b>
+        <span>أخويا</span>
+      </div>
+
+    </div>
+
+  </section>
+
+<!-- GALLERY -->
+<section id="memories" class="section">
+
+  <div class="section-title">
+    <span>02</span>
+    <h2>ذكرياتنا 📸</h2>
+  </div>
+
+  <p class="muted">
+    أجمل الذكريات ❤️
+  </p>
+
+  <div class="gallery" id="gallery">
+
+    <div class="memory-card glass">
+      <img src="Image1.jpeg" alt="الخال">
+      <div class="memory-info">
+        <b>قلب الحوكشا</b>
+        <small>❤️</small> 
+      </div>
+    </div>
+
+    <div class="memory-card glass">
+       <img src="Image2.jpeg" alt="شقي">
+      <div class="memory-info">
+        <b>الدنيا</b>
+        <small>❤️</small>
+      </div>
+    </div>
+
+    <div class="memory-card glass">
+      <img src="Image3.jpeg" alt="ذكريات حلوة">
+      <div class="memory-info">
+        <b>ذكريات حلوة</b>
+        <small>❤️</small>
+      </div>
+    </div>
+
+    <div class="memory-card glass">
+      <img src="Image4.jpeg" alt="أيام ">
+      <div class="memory-info">
+        <b>الخال </b>
+        <small>🔥</small> 
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- VIDEOS -->
+<section class="section">
+
+  <div class="section-title">
+    <span>03</span>
+    <h2>فيديوهات علي الماشي كدسا 🎬</h2>
+  </div>
+
+  <p class="muted">
+    أربع فيديوهات متجيرين
+  </p>
+
+  <div class="video-grid">
+
+    <div class="video-card glass">
+      <video controls playsinline preload="metadata">
+        <source src="video1.mp4" type="video/mp4">
+        المتصفح لا يدعم تشغيل الفيديو
+      </video>
+
+      <div class="video-info">
+        <b>🎬</b>
+      </div>
+    </div>
+
+    <div class="video-card glass">
+      <video controls playsinline preload="metadata">
+        <source src="video2.mp4" type="video/mp4">
+        المتصفح لا يدعم تشغيل الفيديو
+      </video>
+
+      <div class="video-info">
+        <b>😂هموت</b>
+      </div>
+    </div>
+
+    <div class="video-card glass">
+      <video controls playsinline preload="metadata">
+        <source src="video3.mp4.mp4" type="video/mp4">
+        المتصفح لا يدعم تشغيل الفيديو
+      </video>
+
+      <div class="video-info">
+        <b>حبيب اخوك</b>
+      </div>
+    </div>
+
+    <div class="video-card glass">
+      <video controls playsinline preload="metadata">
+        <source src="Video 20.mp4" type="video/mp4">
+        المتصفح لا يدعم تشغيل الفيديو
+      </video>
+
+      <div class="video-info">
+        <bآ>حبيب دين امي</b></b>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+  
+  <!-- TIMELINE -->
+  <section class="section">
+
+    <div class="section-title">
+      <span>03</span>
+      <h2>Timeline ⏳</h2>
+    </div>
+
+    <div class="timeline">
+
+      <div class="time-card glass">
+        <b>أول معرفة</b>
+        <p>
+          كان اوسخ يوم في حياتي 😂يوم مدخلت معاك السكشن ده للاسف مطعلعش اخر يوم وفضلت مكمل معاك لحد دلوقتي ليه مش عارف
+        </p>
+      </div>
+
+      <div class="time-card glass">
+        <b>أول خروجة</b>
+        <p>
+          كان اول مره نروح القاهره مع بعض كان يوم فاجر 
+        </p>
+      </div>
+
+      <div class="time-card glass">
+        <b>موقف مستحيل انساه</b>
+        <p>
+       لو هتكلم جد حاجات كتير فشخ في موقف كده خلي الحاجه تحبك يوم بورسعيد مثلا لما كنت بتعامل اخواتي اكنهم اخواتك بالظبط 
+       موقف معيا انا لما كنا شادين مع بغض وانت الي جيت كلمتني واتفاهمنا
+        </p>
+      </div>
+
+      <div class="time-card glass">
+        <b>دلوقتي</b>
+        <p>
+          لسه مكملين ولسه الجاي أحلى ❤️
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- QUIZ -->
+  <section class="section">
+
+    <div class="section-title">
+      <span>04</span>
+      <h2>قد إيه تعرف حوكشا؟ 😂</h2>
+    </div>
+
+    <div class="quiz glass">
+
+      <h3 id="quizQuestion"></h3>
+
+      <div id="quizAnswers"></div>
+
+      <p id="quizResult"></p>
+
+      <button
+        class="secondary hidden"
+        id="nextQuiz"
+      >
+        السؤال اللي بعده →
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- FRIENDSHIP -->
+  <section class="section">
+
+    <div class="section-title">
+      <span>05</span>
+      <h2>Friendship Meter ❤️</h2>
+    </div>
+
+    <div class="glass meter-card">
+
+      <div class="meter-labels">
+        <span>Random</span>
+        <span>Friend</span>
+        <span>Brother</span>
+        <span>KHALO 😂</span>
+      </div>
+
+      <div class="meter">
+        <span id="meterFill"></span>
+      </div>
+
+      <button
+        class="primary"
+        onclick="boostMeter()"
+      >
+        ارفع المستوى 🔥
+      </button>
+
+      <h3 id="meterText">
+        جارِ قياس مستوى الصحوبية...
+      </h3>
+
+    </div>
+
+  </section>
+
+
+  <!-- MESSAGE EDITOR -->
+  <section class="section editor-section">
+
+    <div class="section-title">
+      <span>06</span>
+      <h2>بطاقة امن دولهة 💌</h2>
+    </div>
+
+    <div class="editor-grid">
+
+      <div class="glass editor">
+
+        <label>
+          اسم المحتفى به
+        </label>
+
+        <input
+          id="toName"
+          value="Khalo"
+        >
+
+        <label>
+          اسم المرسل
+        </label>
+
+        <input
+          id="fromName"
+          value="Your Friend"
+        >
+
+        <label>
+          الرسالة
+        </label>
+
+        <textarea
+          id="messageInput"
+          rows="10"
+        >مش عارف أبدأ الكلام منين بس حابب أقولك إن وجودك في حياتي حاجة أنا بجد مقدرها ومهما اتقال كلام مش هيكفي يوصف قيمة الصحوبية اللي بينا يمكن مش دايما بعرف أقول الكلام ده ويمكن أغلب وقتنا بيبقى هزار وضحك ورخامة على بعض، بس في الآخر إنت واحد من الناس اللي بكون مطمن وأنا عارف إنهم موجودين أتمنى السنة الجديدة دي تكون بداية لحاجات كتير حلوة ليك وتحقق فيها حاجات نفسك فيها من زمان وتوصل لكل حاجة بتسعى ليها وأتمنى كمان إنك تفضل دايما بنفس شخصيتك وروحك الحلوة استغفرالله ومهما الدنيا ضغطت عليك أو قابلتك حاجات مش على مزاجك تفضل عارف إن كل حاجة بتعدي وإن اللي جاي بإذن الله أحسن عايز أشوفك دايما ناجح وفرحان ومحقق اللي نفسك فيه، وأفضل أشوفك بتتقدم خطوة بخطوة لحد ما توصل للمكان اللي تستحقه وربنا يبعد عنك أي شخص أو حاجة ممكن تضايقك غيري ويعوضك عن أي حاجة زعلتك أو تعبتك قبل كده وأهم حاجة ما تتغيرش مهما حصل خليك فاكر إن السنين والأيام ممكن تغير حاجات كتير لكن الصحوبية الحقيقية بتفضل زي ما هي ولو اتغيرت عليا صدقني هفشخك كل سنة وإنت صاحبي وأخويا وكل سنة ونت بخير وبألف صحة وسعادة وإن شاء الله العمر الجاي كله يكون نجاح وأيام حلوة مع بعض</textarea>
+
+      </div>
+
+
+      <div class="glass greeting-card">
+
+        <span>
+          HAPPY BIRTHDAY
+        </span>
+
+        <h2 id="previewName">
+          Khalo
+        </h2>
+
+        <div class="heart">
+          ❤️
+        </div>
+
+        <p id="previewMessage"></p>
+
+        <small>
+          From
+          <b id="previewFrom">
+            Your Friend
+          </b>
+        </small>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WISH WALL -->
+  <section class="section">
+
+    <div class="section-title">
+      <span>07</span>
+      <h2>Wish Wall 💭</h2>
+    </div>
+
+    <div class="wish-grid">
+
+      <div class="glass wish-form">
+
+        <input
+          id="wishInput"
+          placeholder="اكتب أمنية أو تهنئة لـ Khalo..."
+        >
+
+        <button
+          class="primary"
+          onclick="addWish()"
+        >
+          أضف الأمنية ✨
+        </button>
+
+      </div>
+
+      <div
+        id="wishWall"
+        class="wish-wall"
+      ></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BUG REPORT -->
+  <section class="section">
+
+    <div class="section-title">
+      <span>08</span>
+      <h2>Khalo Bug Report 😂</h2>
+    </div>
+
+    <div class="glass bug-report">
+
+      <div class="terminal-head">
+        <i></i>
+        <i></i>
+        <i></i>
+
+        <span>
+          khalo_system.exe
+        </span>
+      </div>
+
+      <pre id="bugText"></pre>
+
+      <button
+        class="secondary"
+        onclick="newBug()"
+      >
+        تشخيص تاني 🔄
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- FINAL -->
+  <section class="section final-section">
+
+    <div class="section-title">
+      <span>09</span>
+      <h2>🎁</h2>
+    </div>
+
+    <div class="glass surprise">
+
+      <div id="cakeArea">
+
+        <div class="big-cake">
+          🎂
+        </div>
+
+        <div class="candle-row">
+
+          <button onclick="blowCandles()">
+            🕯️ 🕯️ 🕯️
+          </button>
+
+        </div>
+
+        <p>
+          اطفي الشموع يا Khalo 💨
+        </p>
+
+      </div>
+
+
+      <div
+        id="finalMessage"
+        class="hidden"
+      >
+
+        <div class="fireworks">
+        
+        </div>
+
+        <h1>
+          Happy Birthday Khalo ❤️
+        </h1>
+
+        <p>
+          كل سنة وإنت طيب يخويا
+          وإن شاء الله العمر الجاي كله
+        مع بعض
+        </p>
+
+        <button
+          class="primary"
+          onclick="celebrate()"
+        >
+          احتفال مرة كمان 
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+    Made with ❤️ for Khalo
+  </footer>
+
+</main>
+
+
+<div id="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
